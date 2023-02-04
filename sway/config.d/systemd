@@ -1,0 +1,31 @@
+# Auto switch vertical/horizontal tiling.
+# https://github.com/nwg-piotr/autotiling
+exec systemd-run --user --unit=sway-autotiling /usr/bin/autotiling
+
+# NetWorkManager tray indicator.
+# https://gitlab.gnome.org/GNOME/network-manager-applet
+exec systemd-run --user --unit=sway-networkmanager /usr/bin/nm-applet --indicator
+
+# Audio and brightness OSD.
+# https://github.com/misterdanb/avizo
+exec systemd-run --user --unit=sway-osd /usr/bin/avizo-service
+
+# Polkit agent.
+# https://gitlab.gnome.org/Archive/policykit-gnome
+exec systemd-run --user --unit=sway-polkit /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Sway wallpaper.
+# https://github.com/swaywm/swaybg
+exec systemd-run --user --unit=sway-wallpaper /usr/bin/swaybg -o \* -i $wallpaper -m fill
+
+# Map workspace names to icons.
+# https://github.com/Lyr-7D1h/swayest_workstyle
+exec systemd-run --user --unit=sway-workstyle /usr/bin/sworkstyle -l error
+
+# swaylock fork with blur.
+# https://github.com/jirutka/swaylock-effects
+exec systemd-run --user --unit=sway-lock /usr/bin/swayidle -w \
+         timeout 300 'swaylock --screenshots --clock --indicator --indicator-radius 100 --effect-blur 7x5' \
+         timeout 600 'swaymsg "output * power off"' \
+         resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
