@@ -1,0 +1,101 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "network",
+        "tray",
+        "wireplumber",
+        "temperature",
+        "cpu",
+        "memory",
+        "battery"
+    ],
+    "sway/workspaces": {
+        "format": "{value}",
+        "all-outputs": false,
+        "disable-scroll": true
+    },
+    "sway/mode": {
+        "format": "{}"
+    },
+    "clock": {
+        "format": "{:%a  %e %b %Y   %H:%M}",
+        "tooltip-format": "<span font='JetBrains Mono Bold 13'><big>{:%d %B}</big>\n<tt><small>{calendar}</small></tt></span>",
+        "today-format": "<span color='#ff6699'><b><u>{}</u></b></span>",
+        "format-calendar": "<span color='#ecc6d9'><b>{}</b></span>",
+        "on-scroll": {
+            "calendar": 1
+        }
+    },
+    "network": {
+        "format": "{bandwidthDownBytes}",
+        "interval": 1,
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "alacritty -e nmtui-connect"
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 15,
+        "reverse-direction": true
+    },
+    "wireplumber": {
+        "format": "{icon}",
+        "format-muted": "",
+        "format-icons": [
+            "",
+            ""
+        ],
+        "tooltip-format": "{node_name}: {volume}%",
+        "on-click": "alacritty -e alsamixer"
+    },
+    "temperature": {
+        "format": "{icon}",
+        "critical-threshold": 80,
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "cpu": {
+        "format": "",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "on-click": "gnome-system-monitor -p"
+    },
+    "memory": {
+        "format": "",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "on-click": "gnome-system-monitor -r"
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    }
+}

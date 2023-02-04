@@ -1,0 +1,68 @@
+#waybar {
+    background: black;
+    color: white;
+    font-family: Noto Sans, sans-serif;
+    font-size: 13px;
+}
+
+#workspaces button,
+#mode,
+#clock,
+#network,
+#tray,
+#wireplumber,
+#temperature,
+#cpu,
+#memory,
+#battery {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#workspaces button {
+    color: gray;
+    border-top: 2px solid black;
+    border-radius: 0;
+}
+
+#workspaces button.focused {
+    color: white;
+    border-top: 2px solid grey;
+}
+
+#workspaces button.urgent {
+    color: red;
+}
+
+#workspaces button:hover {
+    color: black;
+    border-top: 2px solid black;
+}
+
+#mode {
+    color: orange;
+    border: 2px solid orange;
+}
+
+#clock {
+    font-weight: bold;
+}
+
+#tray menu {
+    background-color: black;
+    color: white;
+    border-radius: 0;
+}
+
+#battery.warning,
+#cpu.warning,
+#memory.warning {
+    color: orange;
+}
+
+#battery.critical,
+#cpu.critical,
+#memory.critical,
+#temperature.critical {
+    color: red;
+}
