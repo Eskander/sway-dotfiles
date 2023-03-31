@@ -1,26 +1,27 @@
-# Audio controls
+# Launcher
+bindsym --release Super_L exec ulauncher-toggle
+
+# Terminal
+bindsym $mod+Return exec systemd-run --user --scope alacritty
+bindsym $mod+a exec systemd-run --user --scope alacritty
+
+# Volume controls
 bindsym XF86AudioRaiseVolume exec volumectl -u up
 bindsym XF86AudioLowerVolume exec volumectl -u down
 bindsym XF86AudioMute exec volumectl toggle-mute
+
+# Brightness controls
+bindsym XF86MonBrightnessUp exec lightctl up
+bindsym XF86MonBrightnessDown exec lightctl down
 
 # MPRIS controls
 bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
 
-# Brightness controls
-bindsym XF86MonBrightnessUp exec lightctl up
-bindsym XF86MonBrightnessDown exec lightctl down
-
 # Dark mode
 bindsym XF86TouchpadToggle exec darkman toggle
 
-# Terminal
-bindsym $mod+Return exec systemd-run --user --scope alacritty
-
-# Menu
-bindsym $mod+d exec ulauncher-toggle
-
 # Screenshot
-bindsym Print exec grim ~/Pictures/Screenshots/screenshot-$(date +"%Y-%m-%d-%H-%M-%S").png && paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
-bindsym $mod+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/screenshot-$(date +"%Y-%m-%d-%H-%M-%S").png && paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+bindsym Print exec ~/.config/sway/scripts/screenshot.sh
+bindsym $mod+Print exec ~/.config/sway/scripts/screenshot.sh select

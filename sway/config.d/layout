@@ -1,12 +1,14 @@
-# Borders
-default_border none
-default_floating_border normal
-
-for_window [app_id="ulauncher"] border none
+# Font
+font pango:Noto Sans Bold 13px
+title_align center
 
 # Gaps
 gaps inner 5
 smart_gaps on
 
-# Font
-font pango:Noto Sans Bold 13px
+# Borders
+default_border none
+default_floating_border normal
+
+for_window [app_id="ulauncher"] border none
+for_window [app_id="galendae"] border none

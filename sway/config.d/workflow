@@ -10,6 +10,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+floating_modifier $mod normal
+
 # Kill
 bindsym $mod+Shift+q kill
 
@@ -28,8 +30,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-floating_modifier $mod normal
 
 # Switch to workspace
 bindsym $mod+ampersand workspace number 1
