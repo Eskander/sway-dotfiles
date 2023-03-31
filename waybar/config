@@ -33,7 +33,8 @@
         "format-calendar": "<span color='#ecc6d9'><b>{}</b></span>",
         "on-scroll": {
             "calendar": 1
-        }
+        },
+        "on-click": "galendae"
     },
     "network": {
         "format": "{bandwidthDownBytes}",
