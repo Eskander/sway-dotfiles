@@ -1,0 +1,16 @@
+[Unit]
+Description=Idle daemon for Sway
+PartOf=graphical-session.target
+After=sway.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/swayidle -w \
+         timeout 300 'swaylock --screenshots --clock --indicator --indicator-radius 100 --effect-blur 7x5' \
+         timeout 600 'swaymsg "output * power off"' \
+         resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

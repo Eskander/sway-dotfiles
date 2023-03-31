@@ -1,0 +1,12 @@
+[Unit]
+Description=Wallpaper for Sway
+PartOf=graphical-session.target
+After=sway.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/swaybg -o * -i .config/sway/wallpaper.png -m fill
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

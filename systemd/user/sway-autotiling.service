@@ -1,0 +1,12 @@
+[Unit]
+Description=Autotiling for Sway
+PartOf=graphical-session.target
+After=sway.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/autotiling
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

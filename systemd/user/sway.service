@@ -1,0 +1,19 @@
+[Unit]
+Description=Sway Window Manager
+Documentation=man:sway(5)
+BindsTo=graphical-session.target
+Wants=xdg-desktop-autostart.target
+Wants=graphical-session-pre.target
+After=graphical-session-pre.target
+
+[Service]
+Type=notify
+NotifyAccess=all
+Environment=XDG_CURRENT_DESKTOP=sway
+ExecStart=/usr/bin/sway
+Restart=on-failure
+RestartSec=1
+TimeoutStopSec=10
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Sound/Brightness OSD for Sway
+PartOf=graphical-session.target
+After=sway.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/avizo-service
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

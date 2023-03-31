@@ -1,0 +1,12 @@
+[Unit]
+Description=Workspace icons for Sway
+PartOf=graphical-session.target
+After=sway.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sworkstyle -l error
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
