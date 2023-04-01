@@ -12,6 +12,7 @@ libinput-gestures     | Touchpad gestures               | https://github.com/bul
 mako                  | Notification daemon             | https://github.com/emersion/mako
 networkmanager-applet | NetworkManager tray indicator   | https://gitlab.gnome.org/GNOME/network-manager-applet
 policykit-gnome       | Polkit agent                    | https://gitlab.gnome.org/Archive/policykit-gnome
+slurp                 | Screen select (for screenshots) | https://github.com/emersion/slurp
 swaybg                | Set wallpaper                   | https://github.com/swaywm/swaybg
 swaylock-effects      | Swaylock fork with blur         | https://github.com/jirutka/swaylock-effects
 sworkstyle            | Map workspace names to icons    | https://github.com/Lyr-7D1h/swayest_workstyle
