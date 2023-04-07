@@ -16,7 +16,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+q kill
 
 # Fullscreen
-bindsym $mod+f fullscreen
+bindsym $mod+Shift+f fullscreen
 
 # Resize
 mode "resize" {

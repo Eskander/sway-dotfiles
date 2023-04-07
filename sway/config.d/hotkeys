@@ -1,6 +1,9 @@
 # Launcher
 bindsym --release Super_L exec ulauncher-toggle
 
+# Browser
+bindsym $mod+f exec systemd-run --user --scope firefox
+
 # Terminal
 bindsym $mod+Return exec systemd-run --user --scope alacritty
 bindsym $mod+a exec systemd-run --user --scope alacritty
