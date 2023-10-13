@@ -1,5 +1,8 @@
 # sway dotfiles
 
+### Preview
+![Config preview](https://raw.githubusercontent.com/Eskander/sway-dotfiles/main/Preview.png)
+
 ### Components
 
 Utility               | Description                     | Project
